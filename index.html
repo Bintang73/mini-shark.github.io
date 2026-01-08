@@ -1,239 +1,291 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Shark Tank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shark Tank</title>
 
-<!-- Google Font Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
-    * {
-        box-sizing: border-box;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-        margin: 0;
-        padding: 16px;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    }
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #122c4f, #001524);
+        }
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-    }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
 
-    /* ===== LOGO ===== */
-    .logo {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+        /* ===== LOGO ===== */
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
 
-    .logo img {
-        max-width: 180px;
-        width: 100%;
-        height: auto;
-    }
-
-    .team-name {
-        text-align: center;
-        color: #e0e7ff;
-        font-size: 16px;
-        margin-bottom: 24px;
-        font-weight: 600;
-    }
-
-    .question-card {
-        background: #fff;
-        border-radius: 18px;
-        padding: 20px;
-        margin-bottom: 22px;
-        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        border-left: 8px solid;
-    }
-
-    .question-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 16px;
-        color: #111827;
-    }
-
-    .answers {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 14px;
-    }
-
-    .answer {
-        padding: 14px 16px;
-        border-radius: 14px;
-        background: #f9fafb;
-        cursor: pointer;
-        border: 2px solid transparent;
-        transition: all 0.2s ease;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .answer strong {
-        display: block;
-        margin-bottom: 6px;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .answer:hover {
-        background: #eef2ff;
-        border-color: #6366f1;
-    }
-
-    .answer.active {
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        color: #fff;
-        transform: scale(1.03);
-    }
-
-    .score-box {
-        position: sticky;
-        bottom: 12px;
-        background: linear-gradient(135deg, #22c55e, #16a34a);
-        color: #fff;
-        padding: 20px;
-        border-radius: 18px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: 600;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    @media (max-width: 600px) {
         .logo img {
-            max-width: 140px;
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+        }
+
+        .team-name {
+            text-align: center;
+            color: #e0e7ff;
+            font-size: 16px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .question-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 22px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-left: 8px solid;
         }
 
         .question-title {
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #111827;
+        }
+
+        .answers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
         }
 
         .answer {
-            font-size: 13px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: #f9fafb;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .answer strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .answer:hover {
+            background: #8fb3e2;
+            border-color: #8fb3e2;
+        }
+
+        .answer.active {
+            background: linear-gradient(135deg,#1e2e4f, #001524);
+            color: #fff;
+            transform: scale(1.03);
         }
 
         .score-box {
-            font-size: 18px;
+            position: sticky;
+            bottom: 12px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            padding: 20px;
+            border-radius: 18px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-    }
-</style>
+
+        @media (max-width: 600px) {
+            .logo img {
+                max-width: 140px;
+            }
+
+            .question-title {
+                font-size: 16px;
+            }
+
+            .answer {
+                font-size: 13px;
+            }
+
+            .score-box {
+                font-size: 18px;
+            }
+        }
+
+        .change-team {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+
+        .btn-change-team {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            padding: 12px 26px;
+            border-radius: 999px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.25s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-change-team:hover {
+            background: #ffffff;
+            color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-change-team:active {
+            transform: scale(0.96);
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img src="logo.jpg" alt="Mini Shark Tank Logo">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="logo.png" alt="Mini Shark Tank Logo">
+        </div>
+
+        <div class="team-name" id="teamName"></div>
+
+        <div id="survey"></div>
+
+        <div class="score-box">
+            Total Skor: <span id="totalScore">0</span>
+        </div>
+
+        <div class="change-team">
+            <button class="btn-change-team" onclick="changeTeamName()">
+                ✏️ Ganti Nama Tim
+            </button>
+        </div>
     </div>
 
-    <div class="team-name" id="teamName"></div>
+    <script>
+        /* ===== INPUT NAMA TIM ===== */
+        let team = sessionStorage.getItem("teamName");
 
-    <div id="survey"></div>
+        if (!team) {
+            team = prompt("Masukkan nama tim:");
+            if (!team || team.trim() === "") {
+                team = "Tanpa Nama";
+            }
+            sessionStorage.setItem("teamName", team);
+        }
 
-    <div class="score-box">
-        Total Skor: <span id="totalScore">0</span>
-    </div>
-</div>
+        document.getElementById("teamName").textContent = "Tim: " + team;
 
-<script>
-/* ===== INPUT NAMA TIM ===== */
-let team = sessionStorage.getItem("teamName");
+        /* ===== SURVEY DATA ===== */
+        const questions = [
+            {
+                color: "#6366f1",
+                text: "Bagaimana tingkat kepuasan Anda terhadap pelayanan yang kami berikan?",
+                answers: [
+                    { label: "A", point: 10, text: "Sangat tidak puas, pelayanan lambat dan tidak membantu sama sekali." },
+                    { label: "B", point: 20, text: "Tidak puas, masih banyak kekurangan dalam pelayanan." },
+                    { label: "C", point: 30, text: "Cukup puas, pelayanan berjalan namun belum konsisten." },
+                    { label: "D", point: 40, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "E", point: 50, text: "Sangat puas, pelayanan sangat cepat, ramah, dan profesional." }
+                ]
+            },
+            {
+                color: "#22c55e",
+                text: "Bagaimana penilaian Anda terhadap kualitas produk yang kami sediakan?",
+                answers: [
+                    { label: "A", point: 10, text: "Kualitas sangat buruk dan tidak sesuai harapan." },
+                    { label: "B", point: 25, text: "Kualitas kurang baik dan sering bermasalah." },
+                    { label: "C", point: 35, text: "Kualitas cukup baik namun masih bisa ditingkatkan." },
+                    { label: "D", point: 45, text: "Kualitas baik dan sesuai dengan kebutuhan." },
+                    { label: "E", point: 55, text: "Kualitas sangat baik, stabil, dan melebihi ekspektasi." }
+                ]
+            }
+        ];
 
-if (!team) {
-    team = prompt("Masukkan nama tim:");
-    if (!team || team.trim() === "") {
-        team = "Tanpa Nama";
-    }
-    sessionStorage.setItem("teamName", team);
-}
+        const surveyEl = document.getElementById("survey");
+        const totalScoreEl = document.getElementById("totalScore");
+        let selectedPoints = {};
 
-document.getElementById("teamName").textContent = "Tim: " + team;
+        function renderSurvey() {
+            surveyEl.innerHTML = "";
 
-/* ===== SURVEY DATA ===== */
-const questions = [
-    {
-        color: "#6366f1",
-        text: "Bagaimana tingkat kepuasan Anda terhadap pelayanan yang kami berikan?",
-        answers: [
-            { label: "A", point: 10, text: "Sangat tidak puas, pelayanan lambat dan tidak membantu sama sekali." },
-            { label: "B", point: 20, text: "Tidak puas, masih banyak kekurangan dalam pelayanan." },
-            { label: "C", point: 30, text: "Cukup puas, pelayanan berjalan namun belum konsisten." },
-            { label: "D", point: 40, text: "Puas, pelayanan cepat dan cukup membantu." },
-            { label: "E", point: 50, text: "Sangat puas, pelayanan sangat cepat, ramah, dan profesional." }
-        ]
-    },
-    {
-        color: "#22c55e",
-        text: "Bagaimana penilaian Anda terhadap kualitas produk yang kami sediakan?",
-        answers: [
-            { label: "A", point: 10, text: "Kualitas sangat buruk dan tidak sesuai harapan." },
-            { label: "B", point: 25, text: "Kualitas kurang baik dan sering bermasalah." },
-            { label: "C", point: 35, text: "Kualitas cukup baik namun masih bisa ditingkatkan." },
-            { label: "D", point: 45, text: "Kualitas baik dan sesuai dengan kebutuhan." },
-            { label: "E", point: 55, text: "Kualitas sangat baik, stabil, dan melebihi ekspektasi." }
-        ]
-    }
-];
+            questions.forEach((q, qIndex) => {
+                const card = document.createElement("div");
+                card.className = "question-card";
+                card.style.borderLeftColor = q.color;
 
-const surveyEl = document.getElementById("survey");
-const totalScoreEl = document.getElementById("totalScore");
-let selectedPoints = {};
+                const title = document.createElement("div");
+                title.className = "question-title";
+                title.textContent = q.text;
 
-function renderSurvey() {
-    surveyEl.innerHTML = "";
+                const answersDiv = document.createElement("div");
+                answersDiv.className = "answers";
 
-    questions.forEach((q, qIndex) => {
-        const card = document.createElement("div");
-        card.className = "question-card";
-        card.style.borderLeftColor = q.color;
+                q.answers.forEach((a, aIndex) => {
+                    const ans = document.createElement("div");
+                    ans.className = "answer";
+                    ans.innerHTML = `<strong>${a.label}</strong>${a.text}`;
 
-        const title = document.createElement("div");
-        title.className = "question-title";
-        title.textContent = q.text;
+                    ans.onclick = () => {
+                        answersDiv.querySelectorAll(".answer").forEach(el => el.classList.remove("active"));
+                        ans.classList.add("active");
+                        selectedPoints[qIndex] = a.point;
+                        updateScore();
+                    };
 
-        const answersDiv = document.createElement("div");
-        answersDiv.className = "answers";
+                    answersDiv.appendChild(ans);
+                });
 
-        q.answers.forEach((a, aIndex) => {
-            const ans = document.createElement("div");
-            ans.className = "answer";
-            ans.innerHTML = `<strong>${a.label}</strong>${a.text}`;
+                card.appendChild(title);
+                card.appendChild(answersDiv);
+                surveyEl.appendChild(card);
+            });
+        }
 
-            ans.onclick = () => {
-                answersDiv.querySelectorAll(".answer").forEach(el => el.classList.remove("active"));
-                ans.classList.add("active");
-                selectedPoints[qIndex] = a.point;
-                updateScore();
-            };
+        function updateScore() {
+            const total = Object.values(selectedPoints).reduce((a, b) => a + b, 0);
+            totalScoreEl.textContent = total;
+        }
 
-            answersDiv.appendChild(ans);
-        });
+        function changeTeamName() {
+            let newName = prompt("Masukkan nama tim baru:");
+            if (newName && newName.trim() !== "") {
+                sessionStorage.setItem("teamName", newName);
+                document.getElementById("teamName").textContent = "Tim: " + newName;
+            }
+        }
 
-        card.appendChild(title);
-        card.appendChild(answersDiv);
-        surveyEl.appendChild(card);
-    });
-}
-
-function updateScore() {
-    const total = Object.values(selectedPoints).reduce((a, b) => a + b, 0);
-    totalScoreEl.textContent = total;
-}
-
-renderSurvey();
-</script>
+        renderSurvey();
+    </script>
 
 </body>
+
 </html>
