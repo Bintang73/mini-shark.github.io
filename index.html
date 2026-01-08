@@ -94,7 +94,7 @@
         }
 
         .answer.active {
-            background: linear-gradient(135deg,#1e2e4f, #001524);
+            background: linear-gradient(135deg, #1e2e4f, #001524);
             color: #fff;
             transform: scale(1.03);
         }
@@ -208,26 +208,125 @@
         const questions = [
             {
                 color: "#6366f1",
-                text: "Bagaimana tingkat kepuasan Anda terhadap pelayanan yang kami berikan?",
+                text: "Tim memahami masalah dan kebutuhan klien dengan jelas",
                 answers: [
-                    { label: "A", point: 10, text: "Sangat tidak puas, pelayanan lambat dan tidak membantu sama sekali." },
-                    { label: "B", point: 20, text: "Tidak puas, masih banyak kekurangan dalam pelayanan." },
-                    { label: "C", point: 30, text: "Cukup puas, pelayanan berjalan namun belum konsisten." },
-                    { label: "D", point: 40, text: "Puas, pelayanan cepat dan cukup membantu." },
-                    { label: "E", point: 50, text: "Sangat puas, pelayanan sangat cepat, ramah, dan profesional." }
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
                 ]
             },
             {
                 color: "#22c55e",
-                text: "Bagaimana penilaian Anda terhadap kualitas produk yang kami sediakan?",
+                text: "Solusi yang ditawarkan relevan dan menjawab kebutuhan klien",
                 answers: [
-                    { label: "A", point: 10, text: "Kualitas sangat buruk dan tidak sesuai harapan." },
-                    { label: "B", point: 25, text: "Kualitas kurang baik dan sering bermasalah." },
-                    { label: "C", point: 35, text: "Kualitas cukup baik namun masih bisa ditingkatkan." },
-                    { label: "D", point: 45, text: "Kualitas baik dan sesuai dengan kebutuhan." },
-                    { label: "E", point: 55, text: "Kualitas sangat baik, stabil, dan melebihi ekspektasi." }
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
                 ]
-            }
+            },
+            {
+                color: "#6366f1",
+                text: "Value proposition disampaikan dengan jelas dan meyakinkan",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#22c55e",
+                text: "Tim menyampaikan kelebihan perusahaan secara tepat dan tidak berlebihan",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#6366f1",
+                text: "Tim menyampaikan kekurangan perusahaan secara jujur",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#22c55e",
+                text: "Tim mampu menjelaskan kekurangan dengan profesional (konteks & mitigasi)",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#6366f1",
+                text: "Jawaban saat Q&A konsisten dengan kartu perusahaan",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#22c55e",
+                text: "Tim menunjukkan sikap profesional dan tidak defensif",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#6366f1",
+                text: "Kerja sama tim terlihat solid dan peran terbagi jelas",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#22c55e",
+                text: "Pitch disampaikan dengan percaya diri dan terstruktur",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
+            {
+                color: "#6366f1",
+                text: "Secara keseluruhan, saya percaya pada perusahaan ini sebagai partner",
+                answers: [
+                    { label: "1", point: 1, text: "Sangat Tidak Setuju" },
+                    { label: "2", point: 2, text: "Sangat Tidak Setuju" },
+                    { label: "3", point: 3, text: "Netral" },
+                    { label: "4", point: 4, text: "Puas, pelayanan cepat dan cukup membantu." },
+                    { label: "5", point: 5, text: "Sangat Setuju" }
+                ]
+            },
         ];
 
         const surveyEl = document.getElementById("survey");
